@@ -1,0 +1,58 @@
+<h2> Flights Details </h2> 
+
+{{fg1}}
+<br>
+<body>
+    
+    {% for flight in fg1 %}
+    <br>
+    {% if flight == 'USA' %}
+
+    <h5>Departure: {{flight}} </h5>
+
+    {% elif flight == 'UK' %}
+    <h5>Arrival: {{flight}}</h5>
+    {% else %}
+    <h5>No of Flights : {{flight}}</h5>
+
+    {% endif %}
+    {% endfor %}
+    </body>
+
+{{fg1}}
+<br>
+    <body>
+    
+        {% for flight in fg1 reversed %}
+        <br>
+        {% if flight == 'USA' %}
+    
+        <li>Departure: {{flight}} </li>
+    
+        {% elif flight == 'UK' %}
+        <li>Arrival: {{flight}}</li>
+        {% else %}
+        <li>No of Flights : {{flight}}</li>
+    
+        {% endif %}
+        {% endfor %}
+        </body>
+        <br>
+        {{fg1}}
+        <br>
+            <body>
+            
+                {% for flight in fg1 reversed %}
+                <br>
+                {% if flight == 'USA' %}
+            
+                {{forloop.counter}} Departure: {{flight}}
+            
+                {% elif flight == 'UK' %}
+                {{forloop.counter}} Arrival: {{flight}}
+                {% else %}
+                {{forloop.counter}} No of Flights : {{flight}}
+            
+                {% endif %}
+                {% endfor %}
+                </body>
